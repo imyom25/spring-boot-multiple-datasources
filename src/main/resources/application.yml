@@ -1,0 +1,27 @@
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_db?currentSchema=public
+    username: postgres
+    password: postgres
+    test-on-borrow: true
+    validation-query: SELECT 1;
+    validation-interval: 30000
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    remove-abandoned: true
+    remove-abandoned-timeout: 60
+    driver-class-name: org.postgresql.Driver
+insurance:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/insurance_db?currentSchema=public
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    test-on-borrow: true
+    validation-query: SELECT 1;
+    validation-interval: 30000
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    remove-abandoned: true
+    remove-abandoned-timeout: 60
